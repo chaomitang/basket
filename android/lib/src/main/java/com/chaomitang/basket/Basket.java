@@ -4,27 +4,27 @@ package com.chaomitang.basket;
 import android.annotation.SuppressLint;
 import android.content.Context;
 
-public class BasketContext {
+public class Basket {
 
     @SuppressLint("StaticFieldLeak")
-    private static BasketContext sInstance;
+    private static Basket sInstance;
     private Context mContext;
 
-    private BasketContext(Context context) {
+    private Basket(Context context) {
         this.mContext = context;
     }
 
     /**
      * 获取实例
      */
-    private static BasketContext getInstance() {
+    private static Basket getInstance() {
         if (sInstance == null) {
-            synchronized (BasketContext.class) {
+            synchronized (Basket.class) {
                 if (sInstance == null) {
                     if (BasketContextProvider.sContext == null) {
                         throw new IllegalStateException("context == null");
                     }
-                    sInstance = new BasketContext(BasketContextProvider.sContext);
+                    sInstance = new Basket(BasketContextProvider.sContext);
                 }
             }
         }
