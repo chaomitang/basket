@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".testlifecycle.TestLifeCycleBActivity"></activity>
+        <activity android:name=".testlifecycle.TestLifeCycleAActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,8 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".TransitionDemoActivity"></activity>
+        <activity android:name=".TransitionDemoActivity" />
     </application>
 
 </manifest>
